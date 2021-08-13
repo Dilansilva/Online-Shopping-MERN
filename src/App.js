@@ -1,9 +1,9 @@
-
+import Login from "./Login/Login";
 
 function App() {
   return (
     <div>
-    <h1>kbj</h1>
+    <Login/>
     </div>
   );
 }
