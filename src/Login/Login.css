@@ -3,4 +3,10 @@
     margin-top: 10%;
     margin-left: 20%;
     margin-right: 20%;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.inner-header {
+    margin: 10px;
 }
