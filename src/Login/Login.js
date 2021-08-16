@@ -6,10 +6,12 @@ import "./Login.css";
 import { Form, Button } from "react-bootstrap";
 
 const Login = () => {
+
   const [error,setError] = useState({
     email: null,
     password: null
   });
+  
   return (
     <div className="main-header">
       <div className="inner-header">
