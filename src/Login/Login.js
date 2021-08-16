@@ -1,4 +1,4 @@
-import React,{useState}from "react";
+import React, { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Login.css";
@@ -8,12 +8,11 @@ import { Form, Button } from "react-bootstrap";
 import InputComponent from "./InputComponent";
 
 const Login = () => {
-
-  const [error,setError] = useState({
+  const [error, setError] = useState({
     email: null,
-    password: null
+    password: null,
   });
-  
+
   return (
     <div className="main-header">
       <div className="inner-header">
