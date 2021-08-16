@@ -2,6 +2,8 @@ import React ,{useState}from 'react';
 import { Form,Button } from 'react-bootstrap';
 import '../Login/Login.css';
 
+import InputComponent from '../Login/InputComponent';
+
 const SignUp = () => {
 
     const [error,setError] = useState({
