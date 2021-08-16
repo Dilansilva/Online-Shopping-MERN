@@ -9,7 +9,8 @@ const SignUp = () => {
     const [error,setError] = useState({
         email: null,
         password: null,
-        name: null
+        name: null,
+        network: null
       });
 
     return (
@@ -19,33 +20,31 @@ const SignUp = () => {
         <h1>Sign Up</h1>
         <br />
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Full Name</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="red-color-text">
-              {error.name}
-            </Form.Text>
-          </Form.Group>
+          <InputComponent
+            name="Full Name"
+            type="Text"
+            placeholder="Full Name"
+            error={error.name}
+          />
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-            <Form.Text className="red-color-text">
-              {error.password}
-            </Form.Text>
-          </Form.Group>
+          <InputComponent
+            name="Email Address"
+            type="email"
+            placeholder="Email"
+            error={error.email}
+          />          
 
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="red-color-text">
-              {error.email}
-            </Form.Text>
-          </Form.Group>
+          <InputComponent
+            name="Password"
+            type="password"
+            placeholder="Password"
+            error={error.password}
+          />                 
 
           <Button variant="primary" type="submit">
             Login
           </Button>
+          
         </Form>
       </div>
     </div>
