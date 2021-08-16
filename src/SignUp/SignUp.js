@@ -6,29 +6,38 @@ const SignUp = () => {
 
     const [error,setError] = useState({
         email: null,
-        password: null
+        password: null,
+        name: null
       });
 
     return (
         <>
         <div className="main-header">
       <div className="inner-header">
-        <h1>Login</h1>
+        <h1>Sign Up</h1>
         <br />
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Full Name</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
             <Form.Text className="red-color-text">
-              {error.email}
+              {error.name}
             </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Email Address</Form.Label>
             <Form.Control type="password" placeholder="Password" />
             <Form.Text className="red-color-text">
               {error.password}
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="red-color-text">
+              {error.email}
             </Form.Text>
           </Form.Group>
 
