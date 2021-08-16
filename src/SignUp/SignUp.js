@@ -12,6 +12,7 @@ const SignUp = () => {
         name: null,
         network: null
       });
+    const [passwordName,setPasswordname] = useState("show password");
 
     return (
         <>
