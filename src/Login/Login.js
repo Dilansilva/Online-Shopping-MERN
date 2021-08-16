@@ -5,6 +5,8 @@ import "./Login.css";
 
 import { Form, Button } from "react-bootstrap";
 
+import InputComponent from "./InputComponent";
+
 const Login = () => {
 
   const [error,setError] = useState({
@@ -18,21 +20,19 @@ const Login = () => {
         <h1>Login</h1>
         <br />
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="red-color-text">
-              {error.email}
-            </Form.Text>
-          </Form.Group>
+          <InputComponent
+            name="Email"
+            type="email"
+            placeholder="Email"
+            error={error.email}
+          />
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-            <Form.Text className="red-color-text">
-              {error.password}
-            </Form.Text>
-          </Form.Group>
+          <InputComponent
+            name="Password"
+            type="Password"
+            placeholder="Password"
+            error={error.password}
+          />
 
           <Button variant="primary" type="submit">
             Login
